@@ -1,0 +1,84 @@
+﻿@model Task.Models.task
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>task</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+          Title
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sub_task.title)
+        </dd>
+
+        <dt>
+            User Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.username)
+        </dd>
+
+        <dt>
+        Task
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+    Start Date
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.start_date)
+        </dd>
+
+        <dt>
+            Actual Cost
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.actual_cost)
+        </dd>
+
+        <dt>
+            Total Budget
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total_budget)
+        </dd>
+
+        <dt>
+            Budget Variance
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.budget_variance)
+        </dd>
+
+        <dt>
+    End Date
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.end_date)
+        </dd>
+
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
